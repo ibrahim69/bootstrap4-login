@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Login </title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/login.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style media="screen">
+      body{
+        background: #3AD3B5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-form">
+        <div class="login">
+          <form class="form">
+            <h3> LogIn to your Account </h3>
+            <div class="form-group">
+              <div class="inner-addon left-addon">
+                <i class="glyphicon glyphicon-user"></i>
+                <label for="username" class="sr-only">username</label>
+                <input type="email" class="form-control" id="username"  placeholder=" Username" required>
+              </div>
+            </div><!-- div penutup dari form grup -->
+            <div class="form-group">
+              <div class="inner-addon right-addon">
+                <i class="fa fa-key" aria-hidden="true"></i>
+                <label class="sr-only" for="password">Password</label>
+                <input type="password" class="form-control" id="password"  placeholder=" Password" required>
+              </div>
+            </div><!-- div penutup dari form grup -->
+            <div class="checkbox checkbox-info">
+                <input type="checkbox" id="remember" name="optionsCheckbox" value="options1" checked>
+                <label for="remember"><b>Remember me</b></label>
+                <button type="submit" class="btn btn-success"> Login <span class="glyphicon glyphicon-chevron-right"></span></button>
+            </div> <!-- penutup div checkbox -->
+          </form> <!-- penutup form horizontal -->
+        </div><!-- penutup div id login -->
+      </div><!-- penutup div login from -->
+    </div> <!-- penutup container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+     $('input').blur(function() {
+        $('input').parents('.form-group').removeClass("active");
+      })
+      .focus(function() {
+        $(this).parents('.form-group').addClass("active")
+      });
+    </script>
+  </body>
+</html>
